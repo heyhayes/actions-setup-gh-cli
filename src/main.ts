@@ -60,8 +60,16 @@ async function install(): Promise<void> {
 
 async function getLatestVersion(): Promise<string> {
   const http = new HttpClient('gh-release')
+  const token = core.getInput('token')
+
+  const headers: {[key: string]: string} = {}
+  if (token) {
+    headers['Authorization'] = `token ${token}`
+  }
+
   const response = await http.getJson(
-    'https://api.github.com/repos/cli/cli/releases/latest'
+    'https://api.github.com/repos/cli/cli/releases/latest',
+    headers
   )
   let latestVersion = (response.result as {tag_name: string}).tag_name
   latestVersion = latestVersion.startsWith('v')

@@ -8,6 +8,9 @@ inputs:
   archive_format:
     required: false
     description: 'the format of the archive that is published at: github.com/cli/cli/releases (defaults to .tar.gz)'
+  token:
+    required: false
+    description: 'GitHub token to avoid rate limits when fetching latest version'
 runs:
   using: 'node20'
   main: 'dist/index.js'

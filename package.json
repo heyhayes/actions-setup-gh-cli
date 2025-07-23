@@ -1,5 +1,5 @@
 {
-  "name": "@ksivamuthu/gh-cli-action",
+  "name": "@heyhayes/gh-cli-action",
   "version": "0.0.3",
   "private": true,
   "description": "Setup gh-cli in self hosted runners",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ksivamuthu/actions-setup-gh-cli.git"
+    "url": "git+https://github.com/heyhayes/actions-setup-gh-cli.git"
   },
   "keywords": [
     "actions",
@@ -28,8 +28,11 @@
     "@actions/core": "^1.9.1",
     "@actions/tool-cache": "^2.0.1"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "devDependencies": {
-    "@types/node": "^18.7.5",
+    "@types/node": "^20.0.0",
     "@typescript-eslint/parser": "^5.33.1",
     "@vercel/ncc": "^0.34.0",
     "eslint": "^8.22.0",
@@ -39,6 +42,6 @@
     "js-yaml": "^4.1.0",
     "prettier": "2.7.1",
     "ts-jest": "^28.0.8",
-    "typescript": "^4.7.4"
+    "typescript": "^5.0.0"
   }
 }
