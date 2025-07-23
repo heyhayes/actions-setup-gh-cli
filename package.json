@@ -1,5 +1,5 @@
 {
-  "name": "@ksivamuthu/gh-cli-action",
+  "name": "@heyhayes/gh-cli-action",
   "version": "0.0.3",
   "private": true,
   "description": "Setup gh-cli in self hosted runners",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ksivamuthu/actions-setup-gh-cli.git"
+    "url": "git+https://github.com/heyhayes/actions-setup-gh-cli.git"
   },
   "keywords": [
     "actions",
