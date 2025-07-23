@@ -15,6 +15,19 @@ To install the gh cli, use the actions as below:
           uses: ksivamuthu/actions-setup-gh-cli@<VERSION>
           with:
             version: 2.24.3
+            token: ${{ secrets.GITHUB_TOKEN }}  # Optional: to avoid rate limits
         - run: |
             gh version
    ```
+
+## Inputs
+
+| Input | Description | Required | Default |
+|-------|-------------|----------|---------|
+| `version` | gh cli version to download | No | Latest version |
+| `archive_format` | Format of the archive (tar.gz or zip) | No | tar.gz |
+| `token` | GitHub token to avoid rate limits when fetching latest version | No | - |
+
+## Rate Limits
+
+When no specific version is provided, this action fetches the latest version from the GitHub API. To avoid rate limits, especially in high-usage scenarios, provide a `token` input with a GitHub token (typically `${{ secrets.GITHUB_TOKEN }}`).
