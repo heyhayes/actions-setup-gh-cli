@@ -12,5 +12,5 @@ inputs:
     required: false
     description: 'GitHub token to avoid rate limits when fetching latest version'
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'
